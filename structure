@@ -1,0 +1,35 @@
+#include<stdio.h>
+struct student{
+    int id;
+    int marks;
+    char div;
+    char name[45];
+}harry,ravi,shubham;
+
+int main(){
+    struct student harry={1,66,'A',"harry"};   //Note for char ('') is used 
+    struct student ravi={2,466,'B',"ravy"};  //and for string ("") is used
+    struct student shubham={3,566,'C',"shubham"}; 
+    
+    printf("Information of harry\n");
+    printf("ID:%d\n",harry.id);
+    printf("Marks:%d\n",harry.marks);
+    printf("Division:%c\n",harry.div);
+    printf("Name:%s\n",harry.name);
+    printf("-------------------");
+    
+    printf("\nInformation of ravi\n");
+    printf("ID:%d\n",ravi.id);
+    printf("Marks:%d\n",ravi.marks);
+    printf("Division:%c\n",ravi.div);
+    printf("Name:%s\n",ravi.name);
+    printf("-------------------");
+    
+    printf("\nInformation of shubham\n");
+    printf("ID:%d\n",shubham.id);
+    printf("Marks:%d\n",shubham.marks);
+    printf("Division:%c\n",shubham.div);
+    printf("Name:%s\n",shubham.name);
+    
+    return 0;
+}
