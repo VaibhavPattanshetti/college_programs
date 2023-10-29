@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<limits.h>
+
+char stack[50];
+char element;
+int top=-1;
+void push(char element){
+if(top==50-1){
+printf("stack is full");
+return;
+}
+stack[++top]=element;
+return;
+}
+int pop(){
+
+if(top==-1){
+printf("stack is empty");
+return 0;
+}
+element=stack[top];
+top--;
+return element;
+}
+int main(){
+    int c=1,choise;
+    char n;
+    
+    printf("1.push\t2.pop\t3.exit\n");
+    while(c){
+    printf("enter choise\n");
+    scanf("%d",&choise);
+    switch (choise)
+    {
+        case 1:
+        printf("Enter character\n");
+        scanf("%s",&n);
+        push(n);
+        break;
+        
+         
+        
+        case 2:
+        printf("%c\n",pop());
+        break;
+        
+        case 3:
+        c=0;
+        break;
+        
+        default:
+        printf("enter valit option");
+        break;
+    
+    }
+    }
+  
+  printf("END");
+
+return 0;
+}
