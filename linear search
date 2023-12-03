@@ -1,0 +1,25 @@
+ #include <stdio.h>
+ int main()
+ {
+    int arr[] = {2, 5, 7, 9, 12, 15, 18, 22, 25};
+    int size=sizeof(arr);
+    int num,flag=0;
+    
+    printf("Enter the element to search:");
+    scanf("%d",&num);
+
+    for(int i=0;i<size;i++){
+        if(num == arr[i]){
+            printf("Element %d found at index %d",num,i);
+            flag=1;
+            break;
+        } 
+      
+     }
+
+     if(flag==0){
+        printf("Element %d not found in the array",num);
+     }
+
+    return 0;
+ }
