@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    int size;
+
+    printf("enter size of array:");
+    scanf("%d",&size);
+    int arr[size];
+    printf("\nenter array elements:");
+    for(int i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+    }
+
+    printf("\narray elements before reversing:");
+    for(int i=0;i<size;i++){
+        printf("%d ",arr[i]);
+    }
+    int start=0;
+    int end=size-1;
+
+    while(start<end){
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+        start++;
+        end--;
+
+    }
+
+    printf("\narray elements after reversing:");
+    for(int i=0;i<size;i++){
+        printf("%d ",arr[i]);
+    }
+
+
+    return 0;
+}
