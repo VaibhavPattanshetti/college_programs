@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+
+
+int main() {
+    char character;
+
+    // Input a character
+    printf("Enter a character (digit): ");
+    scanf("%c", &character);
+
+    // Convert the character to a number using the function
+    int numericValue = character-'0';
+    // Display the result
+    printf("Numeric value of '%c' is %d\n", character, numericValue);
+
+    return 0;
+}
