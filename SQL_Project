@@ -1,0 +1,35 @@
+create database vaibhav_227;
+use vaibhav_227;
+
+create table Customers(
+CustomerID int primary key,
+Name varchar(20),
+Email varchar(40),
+Contact bigint,
+Address varchar(220),
+DOB date
+);
+
+create table Accounts(
+AccountID int primary key,
+AccountType varchar(20),
+Balance int,
+OpenedDate date,
+CustomerID int,
+foreign key (CustomerID) references Customers(CustomerID)
+);
+
+insert into Customers values(1,'Vaibhav','vaibhavpattanshetti123@gmail.com',7972311618,'Sainath Colony Road, Vinayak Nagar, New Sanghavi, Pimpri-chinchwad,pune 411061','2005-01-18');
+insert into Accounts values(1,'Saving',1800000,'2015-01-18',1);
+insert into Customers values(2,'Shailesh','shaileshpawar123@gmail.com',0965123347,'abc colony,satara','2005-09-28');
+insert into Accounts values(3,'Saving',1800000,'2015-01-18',2);
+show tables;
+DESCRIBE Customers;
+
+select * from Customers;
+select * from Accounts;
+
+SELECT Customers.Name, Customers.Email, Accounts.AccountID, Accounts.AccountType, Accounts.Balance
+FROM Customers
+JOIN Accounts ON Customers.CustomerID = Accounts.CustomerID
+where AccountID = 3;
